@@ -12,7 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                /* background-color: #fff;*/
+                background-image: url("images/Background.jpg");
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -49,7 +50,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: black;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -68,7 +69,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('Admin/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -86,7 +87,7 @@
 
                 <div class="links">
                     <a href="/Hello">Hello</a>
-                    <a href="/blogs/">Blog</a>
+                    <a href="/blogs">Blog</a>
                 </div>
             </div>
         </div>

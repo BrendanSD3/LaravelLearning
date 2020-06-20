@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Blog;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,10 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('home');
+    { 
+        $blogs = Blog::latest()->paginate(5);
+        //return view('blogs.index',compact('blogs'))->with('i',(request()->input('page',1)-1)*5);
+        return view('Admin.home',compact('blogs'))->with('i',(request()->input('page',1)-1)*5);
     }
+   
 }

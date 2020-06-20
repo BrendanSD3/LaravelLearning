@@ -21,5 +21,6 @@ Route::get('/Hello', function () {
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('Admin/home', 'HomeController@index')->name('home');
+
 Route::resource('blogs','BlogController');

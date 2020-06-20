@@ -20,7 +20,7 @@
     @endif
    
     <table class="table table-bordered">
-        <tr>
+        <tr class="tableHeader">
             <th>No</th>
             <th>Title</th>
             <th>Description</th>
