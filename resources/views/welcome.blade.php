@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="/Hello">Hello</a>
-                    
+                    <a href="/blogs/">Blog</a>
                 </div>
             </div>
         </div>
