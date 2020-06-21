@@ -59,6 +59,10 @@
                 text-transform: uppercase;
             }
 
+            .link:hover{
+                opacity:0.5;
+
+            }
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -69,12 +73,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('Admin/home') }}">Home</a>
+                        <a class="link" href="{{ url('Admin/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="link" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="link" href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -85,10 +89,15 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <a href="/Hello">Hello</a>
-                    <a href="/blogs">Blog</a>
+                <div class="links" style="background-color:white; border:1px solid black;">
+                    <a class="link" href="/Hello">Hello</a>
+                    <a class="link" href="/blogs">Blog</a>
                 </div>
+
+         
+
+
+
             </div>
         </div>
     </body>
