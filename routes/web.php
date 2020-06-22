@@ -25,3 +25,4 @@ Route::get('Admin/home', 'HomeController@index')->name('home');
 
 Route::resource('blogs','BlogController');
 Route::resource('products', 'ProductController');
+

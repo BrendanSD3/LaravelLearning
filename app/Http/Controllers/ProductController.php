@@ -50,7 +50,8 @@ class ProductController extends Controller
               'count' => $request->get('count'),
             ]);
             $products = \App\Product::all();
-            return view('products.viewproducts', ['allProducts' => $products]);
+            return redirect()->route('products.index')->with('success','Product Added');
+            //return redirect()->route('products.viewproducts', ['allProducts' => $products]);
             //return redirect()->route('products.show');
             
         }
