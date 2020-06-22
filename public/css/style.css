@@ -56,6 +56,12 @@ body {
     color: black;
 }
 
+.latestprods {
+    background-color: rgb(75, 156, 96);
+    font-weight: 600;
+    color: black;
+}
+
 .tableHeader {
     background-color: cyan;
 }
