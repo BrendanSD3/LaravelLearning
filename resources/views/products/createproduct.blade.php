@@ -1,8 +1,9 @@
-@extends('Admin.layout')
+@extends('products.layout')
 @section('content')      
 <div class="flex-center position-ref full-height">
             <div class="content">
-                <form method="POST" action="{{ config('app.url')}}/products">
+                <form method="POST" action="{{ route('products.store')}}">
+                    @csrf
                     <h1> Enter Details to create a product</h1>
                     <div class="form-input">
                         <label>Name</label> <input type="text" name="name">
@@ -24,4 +25,4 @@
                 </form>
             </div>
         </div>
-   
+   @endsection

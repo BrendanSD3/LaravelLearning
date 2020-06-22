@@ -24,4 +24,4 @@ Auth::routes();
 Route::get('Admin/home', 'HomeController@index')->name('home');
 
 Route::resource('blogs','BlogController');
-Route::resource('Admin/products', 'ProductController');
+Route::resource('products', 'ProductController');

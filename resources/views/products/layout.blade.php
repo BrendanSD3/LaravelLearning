@@ -9,6 +9,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <script src="{{ asset('js/app.js') }}" defer></script>
       <meta name="csrf-token" content="{{ csrf_token() }}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -26,17 +27,17 @@
                     <ul class="navbar-nav mr-auto">
                    
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/Admin/home')}}">Home</a>
+                    <a class="nav-link" href="{{ url('/Admin/home')}}">Dashboard</a>
                     </li>   
                     
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/Admin/products/')}}">Products Home</a>
+                    <a class="nav-link" href="{{ url('/products')}}">Products Home</a>
                     </li>  
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('Admin/products/viewproducts') }}">View Products</a>
+                    <a class="nav-link" href="{{ url('/products/viewproducts') }}">View Products</a>
                     </li>    
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('Admin/products/create') }}">Create Products</a>
+                    <a class="nav-link" href="{{ url('/products/create') }}">Create Products</a>
                     </li>    
                 </ul>
                 @endauth

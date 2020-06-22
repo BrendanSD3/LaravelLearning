@@ -13,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('Admin.products');
+        return view('products.products');
         /* $products = \App\Product::all();
 
         return view('Admin.viewproducts', ['allProducts' => $products]); */
@@ -22,7 +22,7 @@ class ProductController extends Controller
     public function show()
     {
         $products = \App\Product::all();
-        return view('Admin.viewproducts', ['allProducts' => $products]);
+        return view('products.viewproducts', ['allProducts' => $products]);
     }
     /**
      * Show the form for creating a new resource.
@@ -31,7 +31,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('Admin.createproduct');
+        return view('products.createproduct');
     }
 
     /**
@@ -43,13 +43,15 @@ class ProductController extends Controller
    
         public function store(Request $request) {
             \App\Product::create([
+                
               'name' => $request->get('name'),
               'description' => $request->get('description'),
               'price' => $request->get('price'),
               'count' => $request->get('count'),
             ]);
-    
-            //return view('Admin.products');
+            $products = \App\Product::all();
+            return view('products.viewproducts', ['allProducts' => $products]);
+            //return redirect()->route('products.show');
             
         }
     
@@ -96,6 +98,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Product::destroy($id);
+  
+        return redirect()->route('products.index')->with('success','Product deleted successfully');
     }
 }

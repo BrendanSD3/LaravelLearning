@@ -51,10 +51,10 @@
                     
                    
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/Admin/products/')}}">Products Home</a>
+                    <a class="nav-link" href="{{ url('/products/products/')}}">Products Home</a>
                     </li>   
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('Admin/products/viewproducts') }}">View Products</a>
+                    <a class="nav-link" href="{{ url('/products/viewproducts') }}">View Products</a>
                     </li>    
                 
                 @endauth
