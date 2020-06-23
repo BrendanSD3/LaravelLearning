@@ -1,7 +1,20 @@
 @extends('products.layout')
 @section('content')
+<style>
+    table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+    </style>
         <div class="flex-center position-ref full-height">
-            <div class="content">
+            <div class="content" style="overflow-x:auto;">
                 <h1>Here's a list of available products</h1>
                 <table class="table table-bordered">
                     <tr class="tableHeader">
