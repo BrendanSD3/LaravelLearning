@@ -19,10 +19,14 @@ Route::get('/', function () {
 Route::get('/Hello', function () {
     return view('HelloWorld');
 });
+/* Route::get('/Trello',function(){
+    return view('Trello');
+}); */
 Auth::routes();
-
+Route::get('Admin/Trello', 'HomeController@trello')->name('trello');
 Route::get('Admin/home', 'HomeController@index')->name('home');
 
 Route::resource('blogs','BlogController');
 Route::resource('products', 'ProductController');
-
+Route::resource('boards','boardcontroller');
+Route::post('submit','boardcontroller@save');

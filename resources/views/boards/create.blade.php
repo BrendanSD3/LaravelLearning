@@ -1,4 +1,4 @@
-@extends('blogs.layout')
+@extends('boards.layout')
   
 @section('content')
 <div class="row">
@@ -23,7 +23,7 @@
     </div>
 @endif
    
-<form action="{{ route('boards.store') }}" method="POST">
+<form action="{{ route('board.store') }}" method="POST">
     @csrf
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -34,8 +34,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>status:</strong>
+                <input type="text" name="status" class="form-control" placeholder="status">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Description:</strong>
-                <textarea class="form-control" style="height:280px" name="description" placeholder="Description"></textarea>
+                <textarea class="form-control" style="height:280px" name="desc" placeholder="desc"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

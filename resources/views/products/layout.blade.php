@@ -10,7 +10,7 @@
       <script src="{{ asset('js/app.js') }}" defer></script>
       <meta name="csrf-token" content="{{ csrf_token() }}">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    
    <style>
        /* Full-width input fields */
@@ -148,9 +148,12 @@ span.psw {
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    
                    @auth
                     <ul class="navbar-nav mr-auto">
-                   
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/boards')}}">Trello Board</a>
+                    </li>  
                     <li class="nav-item">
                     <a class="nav-link" href="{{ url('/Admin/home')}}">Dashboard</a>
                     </li>   

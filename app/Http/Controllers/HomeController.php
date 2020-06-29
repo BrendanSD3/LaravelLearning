@@ -31,5 +31,10 @@ class HomeController extends Controller
 
         return view('Admin.home',compact('blogs','products'))->with('i',(request()->input('page',1)-1)*5);
     }
-   
+   public function trello()
+   {
+       
+        $message="Hello";
+       return view('Admin.Trello',compact('message'));
+   }
 }
