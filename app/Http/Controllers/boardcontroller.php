@@ -1,110 +1,55 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Boards;
-use Illuminate\Support\Facades\Log;
+
+
 class boardcontroller extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $Todos = DB::table('boards')->select('id','title','desc','status')->where('status', 'ToDo')->get();
-        $inprogress = DB::table('boards')->select('id','title','desc','status')->where('status', 'inprogress')->get();
-        $dones = DB::table('boards')->select('id','title','desc','status')->where('status', 'Done')->get();
-        return view('boards.todayboard', compact('Todos','inprogress','dones'));
-                     
+        $user=auth()->user()->name;
+        $Todos = DB::table('boards')->select('id','title','desc','status')->where('status', 'ToDo')->where('edited_by',$user)->get();
+        $inprogress = DB::table('boards')->select('id','title','desc','status')->where('status', 'inprogress')->where('edited_by',$user)->get();
+        $dones = DB::table('boards')->select('id','title','desc','status')->where('status', 'Done')->where('edited_by',$user)->get();
+        return view('boards.todayboard', compact('Todos','inprogress','dones'));        
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(Request $request)
     {
-       return view('boards.create');
-    }
-    public function success()
-    {
-        return view('boards.success');
-    }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    function save(Request $request)
-    {
+       
+      Boards::create([
+                
+            'title' => $request->get('title'),
+            'desc' => $request->get('desc'),
+            'status' => $request->get('status'),
+            'edited_by'=>$request->get('edited_by'),
+          ]);
         
-        $request->validate([
-            'title' => 'required',
-            'desc' => 'required',
-            'status'=>'required',
-        ]);
+        return redirect()->route('board.index')->with('success','Card created successfully.');
   
-        Boards::create($request->all());
-          
-        return redirect()->route('boards.create');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Board $board)
-    {
+    public function edit(Boards $board)
+    {   
+        //$board=DB::table('boards')->select('id','title','desc','status')->where('id',$id)->get();
+        
         return view('boards.edit',compact('board'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request,Board $board)
+    public function update(Request $request, Boards $boards)
     {
-        $request->validate([
-            'title' => 'required',
-            'status'=>'required',
-            'description' => 'required',
-        ]);
-  
-        $board->update($request->all());
-  
-        return redirect()->route('blogs.index')
-                        ->with('success','Blog updated successfully');
+        $id=$request->get('id');
+        Boards::where('id',$id)->update([
+                
+            'title' => $request->get('title'),
+            'desc' => $request->get('desc'),
+            'status' => $request->get('status'),
+            'edited_by'=>$request->get('edited_by'),
+          ]);
+
+        return redirect()->route('board.index')
+                        ->with('success','board updated successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

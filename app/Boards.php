@@ -10,6 +10,7 @@ class Boards extends Model
         'title',
         'desc',
         'status',
+        'edited_by',
         
      ];
 }

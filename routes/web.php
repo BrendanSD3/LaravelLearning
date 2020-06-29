@@ -28,5 +28,9 @@ Route::get('Admin/home', 'HomeController@index')->name('home');
 
 Route::resource('blogs','BlogController');
 Route::resource('products', 'ProductController');
-Route::resource('boards','boardcontroller');
-Route::post('submit','boardcontroller@save');
+Route::resource('board','boardcontroller');
+
+
+Route::post('/board','boardcontroller@create');
+Route::get('/board/edit','boardcontroller@edit');
+Route::put('/board','boardcontroller@update');

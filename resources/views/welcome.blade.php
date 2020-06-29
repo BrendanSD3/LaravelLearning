@@ -92,7 +92,7 @@
                 <div class="links" style="background-color:white; border:1px solid black;">
                     <a class="link" href="/Hello">Hello</a>
                     <a class="link" href="/blogs">Blog</a>
-                    <a class="link" href="/boards">View Boards</a>
+                    <a class="link" href="/board">View Boards</a>
                 </div>
 
          

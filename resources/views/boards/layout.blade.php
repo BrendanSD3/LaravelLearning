@@ -48,19 +48,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                        <a class="nav-link" href="/blogs">Blogs</a></li>
-                        @auth
-                    
-                   
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/products/products/')}}">Products Home</a>
-                    </li>   
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/products/viewproducts') }}">View Products</a>
-                    </li>    
-                
-                @endauth
+          
                     </ul>
 
                     <!-- Right Side Of Navbar -->
