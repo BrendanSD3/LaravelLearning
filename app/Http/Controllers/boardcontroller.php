@@ -5,17 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Boards;
-
+use Illuminate\Support\Facades\Auth;
 
 class boardcontroller extends Controller
 {
     public function index()
     {
-        $user=auth()->user()->name;
+
+        if (Auth::check()) {
+             $user=auth()->user()->name;
         $Todos = DB::table('boards')->select('id','title','desc','status')->where('status', 'ToDo')->where('edited_by',$user)->get();
         $inprogress = DB::table('boards')->select('id','title','desc','status')->where('status', 'inprogress')->where('edited_by',$user)->get();
         $dones = DB::table('boards')->select('id','title','desc','status')->where('status', 'Done')->where('edited_by',$user)->get();
         return view('boards.todayboard', compact('Todos','inprogress','dones'));        
+        }
+      else{
+        $Todos = DB::table('boards')->select('id','title','desc','status')->where('status', 'ToDo')->get();
+        $inprogress = DB::table('boards')->select('id','title','desc','status')->where('status', 'inprogress')->get();
+        $dones = DB::table('boards')->select('id','title','desc','status')->where('status', 'Done')->get();
+        return view('boards.todayboard', compact('Todos','inprogress','dones'));    
+
+      }
     }
     public function create(Request $request)
     {

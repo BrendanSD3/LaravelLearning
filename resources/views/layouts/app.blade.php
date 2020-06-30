@@ -47,11 +47,11 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                         <a class="nav-link" href="/blogs">Blogs</a></li>
-                        <li class="nav-item">
+                        
+                        @auth
+                    <li class="nav-item">
                                 <a class="nav-link" href="{{ url('board') }}">Task Board</a>
                             </li>
-                        @auth
-                    
                    
                     <li class="nav-item">
                     <a class="nav-link" href="{{ url('/products/products/')}}">Products Home</a>
