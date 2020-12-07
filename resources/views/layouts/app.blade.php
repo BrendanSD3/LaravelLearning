@@ -51,7 +51,7 @@
                         @auth
                     <li class="nav-item">
                                 <a class="nav-link" href="{{ url('board') }}">Task Board</a>
-                                <a class="link" href="{{ url('Admin/home') }}">Dashboard</a>
+                                <a class="nav-link" href="{{ url('Admin/home') }}">Dashboard</a>
                             </li>
                    
                    <!--  <li class="nav-item">
