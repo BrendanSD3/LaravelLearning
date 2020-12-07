@@ -49,7 +49,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                    @auth
-                        <a class="link" href="{{ url('Admin/home') }}">Dashboard</a>
+                        <a class="nav-link" href="{{ url('Admin/home') }}">Dashboard</a>
                     @endauth
                     </ul>
 

@@ -50,7 +50,7 @@
             <div class="card">
                 <div class="latestCards card-header">
                 <div style="float:left;">{{ $board->title }} </div>
-                <div style="float:right;"> {{$board->edited_by}}</div>
+                <div style="float:right;">Edited by: {{$board->edited_by}}</div>
                
                 </div>
                 <div class="card-body">

@@ -21,7 +21,7 @@
    
     <table class="table table-bordered">
         <tr class="tableHeader">
-            <th>No</th>
+            <th>Timestamp</th>
             <th>Title</th>
             <th>Description</th>
             <th width="250px">Action</th>

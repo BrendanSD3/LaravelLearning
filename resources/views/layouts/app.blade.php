@@ -20,15 +20,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <style>
-            html, body {
-                /* background-color: #fff;*/
+           /*  html, body {
+                /* background-color: #fff;
                 background-image: url("images/Background.jpg");
+                background-repeat:no-repeat;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-            }
+                
+            } */
             </style>
 </head>
 <body>
@@ -51,7 +53,7 @@
                         @auth
                     <li class="nav-item">
                                 <a class="nav-link" href="{{ url('board') }}">Task Board</a>
-                                <a class="link" href="{{ url('Admin/home') }}">Dashboard</a>
+                               
                             </li>
                    
                    <!--  <li class="nav-item">
