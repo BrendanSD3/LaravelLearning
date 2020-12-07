@@ -42,27 +42,7 @@
     </div>
          @endforeach
    
-         <h3 style="text-align:center;">Latest Products </h3>
-    @foreach ($products as $prod)
-    <br>
-    <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="latestprods card-header">
-                <div style="float:left;">{{ $prod->name }} </div>
-                <div style="float:right;"> {{$prod->updated_at}}</div>
-               
-                </div>
-                <div class="card-body">
-                    {{ $prod->description }}
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-         @endforeach
-        
+        <!-- Fill this with updates to board(s) -->
     
 
 @endsection

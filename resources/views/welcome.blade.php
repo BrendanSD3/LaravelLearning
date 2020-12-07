@@ -85,13 +85,13 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md" style="color:white;">
                     Laravel
                 </div>
 
                 <div class="links" style="background-color:white; border:1px solid black;">
-                    <a class="link" href="/Hello">Hello</a>
-                    <a class="link" href="/blogs">Blog</a>
+                    <a class="link" href="/board">View Task Board</a>
+                    <a class="link" href="/blogs">View Latest Blogs </a>
                    
                 </div>
 

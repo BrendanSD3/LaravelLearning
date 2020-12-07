@@ -170,7 +170,7 @@ function allowDrop(ev) {
 }
     
   }
-  $("<div>hello stackoverflow users</div>").prependTo("#card2"); //appendTo: Append at inside bottom
+ 
 </script>
 </body>
 </html>

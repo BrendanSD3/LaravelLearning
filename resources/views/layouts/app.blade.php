@@ -53,12 +53,12 @@
                                 <a class="nav-link" href="{{ url('board') }}">Task Board</a>
                             </li>
                    
-                    <li class="nav-item">
+                   <!--  <li class="nav-item">
                     <a class="nav-link" href="{{ url('/products/products/')}}">Products Home</a>
                     </li>   
                     <li class="nav-item">
                     <a class="nav-link" href="{{ url('/products/viewproducts') }}">View Products</a>
-                    </li>    
+                    </li>     -->
                 
                 @endauth
                     </ul>
