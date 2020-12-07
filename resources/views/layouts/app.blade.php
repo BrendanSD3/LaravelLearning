@@ -20,8 +20,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <style>
-            html, body {
-                /* background-color: #fff;*/
+           /*  html, body {
+                /* background-color: #fff;
                 background-image: url("images/Background.jpg");
                 background-repeat:no-repeat;
                 color: #636b6f;
@@ -30,7 +30,7 @@
                 height: 100vh;
                 margin: 0;
                 
-            }
+            } */
             </style>
 </head>
 <body>
