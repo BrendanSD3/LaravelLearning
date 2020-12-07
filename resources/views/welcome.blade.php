@@ -73,7 +73,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a class="link" href="{{ url('Admin/home') }}">Home</a>
+                        <a class="link" href="{{ url('Admin/home') }}">Dashboard</a>
                     @else
                         <a class="link" href="{{ route('login') }}">Login</a>
 
@@ -90,13 +90,14 @@
                 </div>
 
                 <div class="links" style="background-color:white; border:1px solid black;">
-                @if (Route::has('login'))
+               
                 @auth
                     <a class="link" href="/board">View Task Board</a>
-                @endauth
-                @else
                     <a class="link" href="/blogs">View Latest Blogs </a>
-                @endif                   
+                @endauth
+                @guest
+                    <a class="link" href="/blogs">View Latest Blogs </a>
+               @endguest                 
                 </div>
 
          

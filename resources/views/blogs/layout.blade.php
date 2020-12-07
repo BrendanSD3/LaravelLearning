@@ -54,7 +54,7 @@
                     
                     <li class="nav-item">                        
                         @auth
-                        <a class="nav-link" href="{{ url('Admin/home') }}">Home</a>
+                        <a class="nav-link" href="{{ url('Admin/home') }}">Dashboard</a>
                         @endauth
                         </li>
                     </ul>
