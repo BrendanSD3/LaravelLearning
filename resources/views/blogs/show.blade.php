@@ -14,13 +14,11 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Title:</strong>
-                {{ $blog->title }}
+               <h2>{{ $blog->title }}</h2>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Description:</strong>
                 {{ $blog->description }}
             </div>
         </div>

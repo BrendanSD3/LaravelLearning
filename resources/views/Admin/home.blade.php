@@ -41,7 +41,7 @@
     </div>
     </div>
          @endforeach
-         <h3 style="text-align:center;">Latest Board updates</h3>
+         <h3 style="text-align:center;">Latest Task updates</h3>
     @foreach ($boards as $board)
     <br>
     <div class="container">
@@ -49,13 +49,13 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="latestCards card-header">
-                <div style="float:left;">{{ $board->title }} </div>
+                <div style="float:left;">Task Name: {{ $board->title }} </div>
                 <div style="float:right;">Edited by: {{$board->edited_by}}</div>
                
                 </div>
                 <div class="card-body">
-                    Edited on :  {{$board->updated_at}}
-                    {{ $board->status}}
+                  <p><b>  Edited on : </b> {{$board->updated_at}}</p>
+                   <p><b> Staus: </b> {{ $board->status}}</p>
                 </div>
             </div>
         </div>
