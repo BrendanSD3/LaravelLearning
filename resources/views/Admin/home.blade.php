@@ -41,7 +41,26 @@
     </div>
     </div>
          @endforeach
-   
+         <h3 style="text-align:center;">Latest Board updates</h3>
+    @foreach ($boards as $board)
+    <br>
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="latestCards card-header">
+                <div style="float:left;">{{ $board->title }} </div>
+                <div style="float:right;"> {{$board->edited_by}}</div>
+               
+                </div>
+                <div class="card-body">
+                    {{ $board->status}}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+         @endforeach
         <!-- Fill this with updates to board(s) -->
     
 

@@ -26,10 +26,10 @@ class HomeController extends Controller
     public function index()
     { 
         $blogs = Blog::latest()->paginate(5);
-        $products= Product::latest()->paginate(5);
+        $boards= Board::latest()->paginate(5);
         //return view('blogs.index',compact('blogs'))->with('i',(request()->input('page',1)-1)*5);
 
-        return view('Admin.home',compact('blogs','products'))->with('i',(request()->input('page',1)-1)*5);
+        return view('Admin.home',compact('blogs','boards'))->with('i',(request()->input('page',1)-1)*5);
     }
    public function trello()
    {

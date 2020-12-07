@@ -28,7 +28,8 @@
         </tr>
         @foreach ($blogs as $blog)
         <tr>
-            <td>{{ ++$i }}</td>
+            <td>{{ $blog->updated_at }}</td>
+           
             <td>{{ $blog->title }}</td>
             <td>{{ $blog->description }}</td>
             <td>

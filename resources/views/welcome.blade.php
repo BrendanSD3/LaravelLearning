@@ -90,9 +90,13 @@
                 </div>
 
                 <div class="links" style="background-color:white; border:1px solid black;">
+                @if (Route::has('login'))
+                @auth
                     <a class="link" href="/board">View Task Board</a>
+                @endauth
+                @else
                     <a class="link" href="/blogs">View Latest Blogs </a>
-                   
+                @endif                   
                 </div>
 
          
