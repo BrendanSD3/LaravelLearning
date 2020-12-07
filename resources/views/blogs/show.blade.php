@@ -10,8 +10,15 @@
             </div>
         </div>
     </div>
-   
-    <div class="row">
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <p style="float:right">Updated: {{ $blog->updated_at }}</p>
+    <h1>{{ $blog->title }}</h1> 
+         
+    <p>{{ $blog->description }}</p>
+  </div>
+</div>
+   <!--  <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                <h2>{{ $blog->title }}</h2>
@@ -22,5 +29,5 @@
                 {{ $blog->description }}
             </div>
         </div>
-    </div>
+    </div> -->
 @endsection
