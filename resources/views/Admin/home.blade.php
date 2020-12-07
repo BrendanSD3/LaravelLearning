@@ -54,6 +54,7 @@
                
                 </div>
                 <div class="card-body">
+                    Edited on :  {{$board->updated_at}}
                     {{ $board->status}}
                 </div>
             </div>
