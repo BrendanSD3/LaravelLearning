@@ -9,7 +9,7 @@
       
    
         <div class="left">
-          <div class="board-text">Today Board</div>
+          <div class="board-text">Task Board</div>
          <button class="primary btn-primary"onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Add New</button>
         </div>
        

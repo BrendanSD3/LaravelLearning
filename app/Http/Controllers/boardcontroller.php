@@ -38,7 +38,7 @@ class boardcontroller extends Controller
             'edited_by'=>$request->get('edited_by'),
           ]);
         
-        return redirect()->route('board.index')->with('success','Card created successfully.');
+        return redirect()->route('board.index')->with('success','Task created successfully.');
   
     }
     public function edit(Boards $board)
