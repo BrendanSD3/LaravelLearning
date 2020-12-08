@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Check all Blogs</h2>
+                <h2>All Blogs</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('blogs.create') }}"> Create new blogs</a>
+                <a class="btn btn-primary" href="{{ route('blogs.create') }}"> New Blog</a>
             </div>
         </div>
     </div>
